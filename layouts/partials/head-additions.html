@@ -1,0 +1,18 @@
+<!-- GLightbox -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Find all images inside post content, wrap them in a link, and init GLightbox
+    document.querySelectorAll('.nested-copy-line-height img').forEach(function (img) {
+      if (img.parentElement.tagName === 'A') return; // already wrapped
+      var a = document.createElement('a');
+      a.href = img.src;
+      a.className = 'glightbox';
+      a.setAttribute('data-title', img.alt);
+      img.parentNode.insertBefore(a, img);
+      a.appendChild(img);
+    });
+    GLightbox();
+  });
+</script>
