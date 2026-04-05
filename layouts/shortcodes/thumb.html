@@ -1,0 +1,11 @@
+{{- $src   := .Get "src" -}}
+{{- $alt   := .Get "alt"   | default "" -}}
+{{- $width := .Get "width" | default "300" -}}
+
+{{- $image := .Page.Resources.Get $src -}}
+{{- if $image -}}
+  {{- $thumb := $image.Resize (printf "%sx" $width) -}}
+  <img src="{{ $thumb.RelPermalink }}" alt="{{ $alt }}" data-fullsrc="{{ $image.RelPermalink }}">
+{{- else -}}
+  {{- warnf "thumb shortcode: image %q not found in page bundle" $src -}}
+{{- end -}}
