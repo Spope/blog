@@ -5,7 +5,9 @@
 {{- $image := .Page.Resources.Get $src -}}
 {{- if $image -}}
   {{- $thumb := $image.Resize (printf "%sx" $width) -}}
-  <img src="{{ $thumb.RelPermalink }}" alt="{{ $alt }}" data-fullsrc="{{ $image.RelPermalink }}">
+  <div class="thumb-item">
+    <img src="{{ $thumb.RelPermalink }}" alt="{{ $alt }}" data-fullsrc="{{ $image.RelPermalink }}">
+  </div>
 {{- else -}}
   {{- warnf "thumb shortcode: image %q not found in page bundle" $src -}}
 {{- end -}}

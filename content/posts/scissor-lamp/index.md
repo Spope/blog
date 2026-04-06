@@ -35,14 +35,16 @@ I let you try to find why I have the wavy line on the pivots holes.
 
 # Building the segments
 
-While waiting for my acryltic order, I started printing parts to assemble the segments.
+While waiting for my acrylic order, I started printing parts to assemble the segments.
 
+{{< gallery >}}
 {{< thumb src="pics/blocks.jpg" alt="Printing blocks" >}}
 {{< thumb src="pics/insertsOff.jpg" alt="This is going to take some time" >}}
 {{< thumb src="pics/insertsDuring.jpg" alt="Clamping the blocks to avoid deformations" >}}
 {{< thumb src="pics/insertsIn.jpg" alt="Finished !" >}}
 {{< thumb src="pics/round.jpg" alt="Some more !" >}}
 {{< thumb src="pics/insertRound.jpg" alt="Done !" >}}
+{{< /gallery >}}
 
 <!--
 ![Blocks](pics/blocks.jpg "blocks")
@@ -57,25 +59,45 @@ Yes, that's a lot of threaded inserts, as I wanted to be able to mount/unmount t
 
 Then I started to think about the base mechanism and my first improvement. On his version, Robert fixed one end on the base with a pivot, the other with a slider to allow the movement, but the side effect is that when deployed or folded, the lamp is not centered on the base. Not a huge deal but setting 2 sliders will allow to keep it centered. The problem is, how to center it without having the lamp sliding from right to left on the sliders ? I thought about wire pulley, rack and pignon, but with my limited skills on CAD, a central pivot, with 1 arm on each slider will do the job. So I learn joints, to animate the lamp.
 
-![CAD Animation](pics/animation.mp4) -- Yes, I film my screen
+<!--![CAD Animation](pics/animation.mp4)-->
+{{<video src="pics/animation.mp4">}} -- Yes, I film my screen
 
 Finally, my order arrived. Clear acrylic, beautifully transparent, meaning one thing, lots of sanding.
 
-![Clear acrylics](pics/clearAcrylics.jpg)
+![The clean and pristine clear acrylic, ready to be frosted](pics/clearAcrylics.jpg)
+{{< gallery >}}
+{{< thumb src="pics/sanding1.jpg" alt="I sanded the flat surface with a random orbital sender to a 180 grit." >}}
+{{< thumb src="pics/sanding2.jpg" alt="I hand sanded the side by hand" >}}
+{{< thumb src="pics/sanding3.jpg" alt="And it was quite messy" >}}
+{{< /gallery >}}
+<!--
 ![Sanding.](pics/sanding1.jpg)
 ![Sanding..](pics/sanding2.jpg)
 ![Sanding...](pics/sanding3.jpg)
+-->
 
-After cleaning the pieces, it was time to start glueing the blocks. I had never used epoxy, and, after trying on one little piece, I decided that it was not going to. It way to slow and messy for what I needed. I chose to use CA glue. On the sanded acrylics it's holding great. I was needing a perfect alignment so I printed some jig
+After cleaning the pieces, it was time to start glueing the blocks. I had never used epoxy, and, after trying on one little piece, I decided that it was not going to. It way to slow and messy for what I needed. I chose to use CA glue. On the sanded acrylics it's holding great. I was needing a perfect alignment so I printed some jig for both the small blocks and curved end.
 
-![Glueing](pics/jig1.jpg)
+![Glueing the blocks with a 3D printed jig, referencing the axe's hole](pics/jig1.jpg)
+{{< gallery >}}
+{{< thumb src="pics/jig2.jpg" alt="Glueing the curved end with another 3D printed jig" >}}
+{{< thumb src="pics/glued.jpg" alt="Done glueing !" >}}
+{{< /gallery >}}
+<!--
 ![Glueing](pics/jig2.jpg)
 ![Glued](pics/glued.jpg)
+-->
 
 Then, comes another of my improvement. I wanted the segment to have 2 LED strip each one, one front, one on the back. Thanks to that, while laid against a wall, the light will be bouncing form the back for a softer light. I chose to set the connectors into the round part, to allow the maximum amount of LED strip between the to axis. Actually I picked the dimensions of the segment based on the LED strip cuttable segment.
 
+{{< gallery >}}
+{{< thumb src="pics/connectors1.jpg" alt="All the connectors to glue (and sand to give glue something to bond to)" >}}
+{{< thumb src="pics/connectors2.jpg" alt="All glued" >}}
+{{< /gallery >}}
+<!--
 ![Connectors](pics/connectors1.jpg "The connectors to glue")
 ![Connectors](pics/connectors2.jpg "Glued")
+-->
 
 After bending the end cap, I cut them to the correct size, once again with a 3D printed jig, on my tracksaw.
 
@@ -83,19 +105,39 @@ After bending the end cap, I cut them to the correct size, once again with a 3D 
 
 Now, begun the assembly.
 
+{{< gallery >}}
+{{< thumb src="pics/assembly1.jpg" alt="I have set 2 strips of aluminium to glue the LEDs on and have better heat dispersion." >}}
+{{< thumb src="pics/assembly2.jpg" alt="Segments starts to pile up" >}}
+{{< thumb src="pics/assembly3.jpg" alt="A first look at the final look of the lamp, at this point I was stocked, and convinced the difficulty was behind me" >}}
+{{< /gallery >}}
+
+<!--
 ![Assembly](pics/assembly1.jpg "Begin of assembly") -- I have set 2 strips of aluminium to glue the LEDs on and have better heat dispersion.
 ![Assembly](pics/assembly2.jpg "Begin of assembly")
 ![Assembly](pics/assembly3.jpg "Begin of assembly")
+-->
 
 # Base mechanism
 
 Now, it's time for the base mechanism. As seen on the previous video, each one is composed of two 10mm aluminium tubes, hold by 3D prints. They are synchronized by the 2 arms mounted on a central pivot. I kept it as simple as my first CAD draft.
+{{< gallery >}}
+{{< thumb src="pics/mechanism1.jpg" alt="Base mechanism" >}}
+{{< thumb src="pics/mechanism2.jpg" alt="Base mechanism" >}}
+{{< thumb src="pics/mechanism3.jpg" alt="Base mechanism" >}}
+{{< thumb src="pics/mechanism4.jpg" alt="Base mechanism" >}}
+{{< thumb src="pics/mechanism5.jpg" alt="Base mechanism" >}}
+{{< /gallery >}}
+{{<video src="pics/mechanism6.mp4">}}
+
+
+<!--
 ![Mechanism](pics/mechanism1.jpg "Base mechanism")
 ![Mechanism](pics/mechanism2.jpg "Base mechanism")
 ![Mechanism](pics/mechanism3.jpg "Base mechanism")
 ![Mechanism](pics/mechanism4.jpg "Base mechanism")
 ![Mechanism](pics/mechanism5.jpg "Base mechanism")
-![Mechanism](pics/mechanism6.mp4 "Base mechanism")
+<!--![Mechanism](pics/mechanism6.mp4 "Base mechanism")-->
+-->
 
 # The electronics
 
