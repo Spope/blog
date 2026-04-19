@@ -1,0 +1,26 @@
+{{ define "main" }}
+
+  {{- $config := site.Params.ananke.home -}}
+  {{- $text_alignment := "tc-l" -}}
+  {{- if eq $config.content_alignment "left" -}}
+    {{- $text_alignment = "tl-l" -}}
+  {{- else if eq $config.content_alignment "right" -}}
+    {{- $text_alignment = "tr-l" -}}
+  {{- end -}}
+
+  <article class="cf ph3 ph5-l pv3 pv4-l f4 {{ $text_alignment }} center measure-wide lh-copy nested-links {{ $.Param "text_color" | compare.Default "mid-gray" }}">
+    {{ .Content }}
+  </article>
+
+  {{ $mainSections := site.Params.mainSections | compare.Default (collections.Slice "post") }}
+  {{ $section := collections.Where $.Site.RegularPages "Section" "in" $mainSections }}
+
+  {{ if ge (len $section) 1 }}
+    <div class="post-grid">
+      {{ range $section }}
+        {{ partial "post-card.html" . }}
+      {{ end }}
+    </div>
+  {{ end }}
+
+{{ end }}

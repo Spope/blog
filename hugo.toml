@@ -5,8 +5,7 @@ theme = 'ananke'
 
 [params]
   description = 'A personal blog'
-  # Featured image shown on the home page
-  # featured_image = '/images/gohugo-default-sample-hero-image.jpg'
+  featured_image_class = "cover bg-center"
 
 [taxonomies]
   tag = 'tags'

@@ -1,0 +1,14 @@
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" | default "" -}}
+{{- $video := .Page.Resources.Get $src -}}
+{{- if $video -}}
+<div class="thumb-item thumb-video">
+  <a href="{{ $video.RelPermalink }}" class="glightbox" data-type="video" data-title="{{ $alt }}">
+    <video preload="metadata" muted playsinline>
+      <source src="{{ $video.RelPermalink }}" type="video/mp4">
+    </video>
+  </a>
+</div>
+{{- else -}}
+  {{- warnf "video shortcode: file %q not found in page bundle" $src -}}
+{{- end -}}

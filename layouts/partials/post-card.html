@@ -1,0 +1,11 @@
+{{ $featured_image := partials.Include "func/GetFeaturedImage.html" . }}
+<a href="{{ .RelPermalink }}" class="post-card">
+  <div class="post-card-inner{{ if not $featured_image }} post-card-no-image{{ end }}">
+    {{ if $featured_image }}
+      <img src="{{ $featured_image }}" alt="{{ .Title }}">
+    {{ end }}
+    <div class="post-card-title-bar">
+      <h2>{{ .Title }}</h2>
+    </div>
+  </div>
+</a>
