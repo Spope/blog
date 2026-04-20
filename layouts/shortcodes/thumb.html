@@ -1,10 +1,10 @@
-{{- $src   := .Get "src" -}}
-{{- $alt   := .Get "alt"   | default "" -}}
-{{- $width := .Get "width" | default "300" -}}
+{{- $src  := .Get "src" -}}
+{{- $alt  := .Get "alt"  | default "" -}}
+{{- $size := .Get "size" | default "600" -}}
 
 {{- $image := .Page.Resources.Get $src -}}
 {{- if $image -}}
-  {{- $thumb := $image.Resize (printf "%sx" $width) -}}
+  {{- $thumb := $image.Fill (printf "%sx%s Center" $size $size) -}}
   <div class="thumb-item">
     <img src="{{ $thumb.RelPermalink }}" alt="{{ $alt }}" data-fullsrc="{{ $image.RelPermalink }}">
   </div>

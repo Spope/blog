@@ -8,6 +8,7 @@
 .thumb-gallery .thumb-item {
   flex: 0 0 calc(50% - 4px);
   overflow: hidden;
+  aspect-ratio: 1;
 }
 
 .thumb-gallery .thumb-item img,

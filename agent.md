@@ -53,7 +53,7 @@ Resizes an image at build time using Hugo's built-in image processing and output
 Usage (image must be inside the page bundle):
 ```
 {{< thumb src="pics/photo.jpg" alt="Description" >}}
-{{< thumb src="pics/photo.jpg" alt="Description" width="400" >}}  ← default width: 300px
+{{< thumb src="pics/photo.jpg" alt="Description" size="400" >}}  ← default size: 600px (square crop)
 ```
 
 ### `layouts/shortcodes/gallery.html`
