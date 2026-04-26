@@ -1,6 +1,6 @@
 baseURL = 'http://blog.spope.fr/'
 languageCode = 'en-us'
-title = 'My projects'
+title = 'My projects, an archive'
 theme = 'ananke'
 
 [markup.tableOfContents]
