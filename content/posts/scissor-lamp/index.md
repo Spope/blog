@@ -2,6 +2,7 @@
 date = '2026-04-04T21:45:14+02:00'
 draft = false
 title = 'Scissor Lamp'
+description = 'Raising the light'
 tags = ['lamp', 'LED', '3D print', 'diy']
 featured_image = 'pics/beauty1.jpg'
 featured_image_class = 'cover bg-center'
@@ -17,11 +18,11 @@ I started watching the video 3 or 4 times in a row. Each step felt doable, but i
 
 So it started with a bit of excitement, diving into an awesome project, and starting being obsessed by it. The first step for me was drawing a segment of this lamp in a CAD software. I came up with my own measurements (a segment is 45×6cm), and 3mm acrylic thickness.
 
-![First CAD screenshot. As every first plan I make, nothing is being kept from that, except one thing, the Phillips screws.](pics/first.png "First CAD prototype.")
+![First CAD screenshot. As every first plan I make, nothing is being kept from that, except one thing, the Phillips screws.](pics/first.png)
 
 I looked for some online providers. In France there are some obvious platforms with great SEO for laser cutting on PMMA, but their prices are exorbitant. I found a small business to order only the pieces for one segment, to check if everything was good in the naive hope of using this first one in the final build. My main interrogation was the bending of the end cap. As I do not have a laser cutter, cutting a wood mold at the exact diameter was not possible as in the video. I ordered 6 pieces to try to have 2 usable bent ones. Luckily, I had a 50mm hole saw, allowing me to create a wood cylinder for heating the piece, and then press it into a 3D printed mold at the exact size. It worked great, but as I feared, the heat of the acrylic had deformed the mold. So, for the other pieces, I will print 2 molds to use them alternately, and a frozen bottle to cool them down between uses.
 
-![My DIY bending shop. As the part I was the most afraid of, it went really great. This picture was taken during the real segments building, not the prototype, but it's the only one I have.](pics/bending.jpg "Bending.")
+![My DIY bending shop. As the part I was the most afraid of, it went really great. This picture was taken during the real segments building, not the prototype, but it's the only one I have.](pics/bending.jpg)
 
 After bending the end cap, I cut them to the correct size, once again with a 3D printed jig, on my tracksaw.
 
@@ -29,7 +30,7 @@ After bending the end cap, I cut them to the correct size, once again with a 3D 
 
 The prototype ended great.
 
-![First prototype segment. This thing is rock solid, but also too heavy.](pics/proto.png "First prototype.")
+![First prototype segment. This thing is rock solid, but also too heavy.](pics/proto.png)
 
 The only problem was weight, more than 400g. This thing was empty, no light, no bolts, and many other things I had no idea about yet but was suspecting. So back to the CAD software, I changed the thickness to 2mm. This is where I learned about parametric modeling. A bit late, so I restarted my design from scratch.
 

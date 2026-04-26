@@ -1,26 +1,49 @@
 {{ define "main" }}
+{{- $posts := where .Site.RegularPages "Section" "posts" -}}
 
-  {{- $config := site.Params.ananke.home -}}
-  {{- $text_alignment := "tc-l" -}}
-  {{- if eq $config.content_alignment "left" -}}
-    {{- $text_alignment = "tl-l" -}}
-  {{- else if eq $config.content_alignment "right" -}}
-    {{- $text_alignment = "tr-l" -}}
-  {{- end -}}
+<main class="home-page">
+  <header class="home-header">
+    <h1 class="blog-title">My projects,<br>an archive.</h1>
+    <span class="home-count">INDEX — {{ printf "%02d" (len $posts) }} ENTRIES</span>
+  </header>
 
-  <article class="cf ph3 ph5-l pv3 pv4-l f4 {{ $text_alignment }} center measure-wide lh-copy nested-links {{ $.Param "text_color" | compare.Default "mid-gray" }}">
-    {{ .Content }}
-  </article>
+  <div class="archive-grid">
+    <ul class="archive-list">
+      {{- range $i, $p := $posts }}
+      <li class="archive-row" data-idx="{{ $i }}">
+        <a href="{{ $p.RelPermalink }}">
+          <span class="archive-num">{{ printf "%02d" (sub (len $posts) $i) }}</span>
+          <span class="archive-titles">
+            <span class="archive-title">{{ $p.Title }}</span>
+            {{- with $p.Description }}<span class="archive-sub">— {{ . }}</span>{{ end }}
+          </span>
+          <span class="archive-year">{{ $p.Date.Format "2006" }}</span>
+        </a>
+      </li>
+      {{- end }}
+    </ul>
 
-  {{ $mainSections := site.Params.mainSections | compare.Default (collections.Slice "post") }}
-  {{ $section := collections.Where $.Site.RegularPages "Section" "in" $mainSections }}
-
-  {{ if ge (len $section) 1 }}
-    <div class="post-grid">
-      {{ range $section }}
-        {{ partial "post-card.html" . }}
-      {{ end }}
-    </div>
-  {{ end }}
-
+    <aside class="archive-preview">
+      <div class="archive-preview-frame">
+        {{- range $i, $p := $posts }}
+        {{- $img := "" }}
+        {{- with $p.Params.featured_image }}
+          {{- with $p.Resources.GetMatch . }}
+            {{- $img = .RelPermalink }}
+          {{- end }}
+        {{- end }}
+        {{- if $img }}
+        <img class="preview-img"
+             src="{{ $img }}"
+             alt=""
+             data-idx="{{ $i }}"
+             data-caption="{{ $p.Date.Format "Jan 2006" | upper }}">
+        {{- end }}
+        {{- end }}
+        <div class="preview-placeholder">HOVER AN ENTRY →</div>
+      </div>
+      <div class="preview-caption"></div>
+    </aside>
+  </div>
+</main>
 {{ end }}

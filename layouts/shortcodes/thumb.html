@@ -1,12 +1,12 @@
 {{- $src  := .Get "src" -}}
-{{- $alt  := .Get "alt"  | default "" -}}
+{{- $alt  := .Get "alt" | default "" -}}
 {{- $size := .Get "size" | default "600" -}}
 
 {{- $image := .Page.Resources.Get $src -}}
 {{- if $image -}}
   {{- $thumb := $image.Fill (printf "%sx%s Center" $size $size) -}}
-  <div class="thumb-item">
-    <img src="{{ $thumb.RelPermalink }}" alt="{{ $alt }}" data-fullsrc="{{ $image.RelPermalink }}">
+  <div class="tile" data-src="{{ $image.RelPermalink }}" data-type="image" data-alt="{{ $alt }}">
+    <img src="{{ $thumb.RelPermalink }}" alt="{{ $alt }}">
   </div>
 {{- else -}}
   {{- warnf "thumb shortcode: image %q not found in page bundle" $src -}}

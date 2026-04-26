@@ -1,0 +1,36 @@
+{{ define "main" }}
+<header class="post-header">
+  <a href="/" class="blog-title">My projects, an archive.</a>
+  <a href="/" class="post-back">← BACK TO INDEX</a>
+</header>
+
+<article class="post-wrap">
+  <aside class="post-aside">
+    <div class="post-date">{{ .Date.Format "Jan 2006" | upper }}</div>
+    <h1>{{ .Title }}</h1>
+    {{- with .Description }}<p class="post-subtitle">{{ . }}</p>{{ end }}
+    {{- with .TableOfContents }}
+    <div class="post-toc">{{ . }}</div>
+    {{- end }}
+  </aside>
+
+  <div class="prose post-body">
+    {{ .Content }}
+
+    <nav class="post-nav">
+      {{- with .NextInSection }}
+      <a href="{{ .RelPermalink }}">
+        <div class="post-nav-label">← OLDER</div>
+        <div class="post-nav-title">{{ .Title }}</div>
+      </a>
+      {{- else }}<span></span>{{ end }}
+      {{- with .PrevInSection }}
+      <a href="{{ .RelPermalink }}" class="post-nav-next">
+        <div class="post-nav-label">NEWER →</div>
+        <div class="post-nav-title">{{ .Title }}</div>
+      </a>
+      {{- else }}<span></span>{{ end }}
+    </nav>
+  </div>
+</article>
+{{ end }}
