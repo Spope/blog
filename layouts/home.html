@@ -10,14 +10,22 @@
   <div class="archive-grid">
     <ul class="archive-list">
       {{- range $i, $p := $posts }}
+      {{- $thumb := "" }}
+      {{- with $p.Params.featured_image }}
+        {{- with $p.Resources.GetMatch . }}
+          {{- $r := .Fill "90x120 q80" }}
+          {{- $thumb = $r.RelPermalink }}
+        {{- end }}
+      {{- end }}
       <li class="archive-row" data-idx="{{ $i }}">
         <a href="{{ $p.RelPermalink }}">
           <span class="archive-num">{{ printf "%02d" (sub (len $posts) $i) }}</span>
           <span class="archive-titles">
             <span class="archive-title">{{ $p.Title }}</span>
-            {{- with $p.Description }}<span class="archive-sub">— {{ . }}</span>{{ end }}
+            {{- with $p.Description }}<span class="archive-sub">{{ . }}</span>{{ end }}
           </span>
           <span class="archive-year">{{ $p.Date.Format "2006" }}</span>
+          <span class="archive-thumb">{{- if $thumb }}<img src="{{ $thumb }}" alt="" loading="lazy">{{- end }}</span>
         </a>
       </li>
       {{- end }}

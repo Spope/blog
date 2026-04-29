@@ -93,9 +93,8 @@ h1.blog-title {
 
 .archive-titles {
   display: flex;
-  gap: 18px;
-  align-items: baseline;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .archive-title {
@@ -115,6 +114,9 @@ h1.blog-title {
   letter-spacing: 0.14em;
   color: var(--ink-soft);
 }
+
+.archive-thumb { display: none; }
+.archive-thumb img { display: block; width: 100%; height: 100%; object-fit: cover; }
 
 /* Sticky preview panel */
 .archive-preview {
@@ -177,6 +179,21 @@ h1.blog-title {
   .home-page { padding: 32px 20px 80px; }
   .archive-grid { grid-template-columns: 1fr; }
   .archive-preview { display: none; }
+  .archive-row a {
+    grid-template-columns: 56px 1fr;
+    gap: 16px;
+    align-items: center;
+  }
+  .archive-num { display: none; }
+  .archive-year { display: none; }
+  .archive-thumb {
+    display: block;
+    width: 56px;
+    aspect-ratio: 3 / 4;
+    order: -1;
+    background: #e8e4db;
+    flex-shrink: 0;
+  }
 }
 
 /* ── Post page ── */
