@@ -142,6 +142,16 @@
     if (e.key === 'ArrowRight') step(1);
   });
 
+  var touchStartX = 0;
+  lb.addEventListener('touchstart', function (e) {
+    touchStartX = e.changedTouches[0].clientX;
+  }, { passive: true });
+  lb.addEventListener('touchend', function (e) {
+    var dx = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(dx) < 50) return;
+    step(dx < 0 ? 1 : -1);
+  }, { passive: true });
+
   /* Collect all post media in DOM order into a single flat list */
   var prose = document.querySelector('.prose');
   if (!prose) return;
