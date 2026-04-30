@@ -7,6 +7,7 @@
   --accent: #C64B2E;
   --sans: 'Inter', -apple-system, system-ui, sans-serif;
   --mono: 'JetBrains Mono', ui-monospace, Menlo, monospace;
+  --preview-w: 420px;
 }
 
 * { box-sizing: border-box; }
@@ -26,9 +27,9 @@ img, video { display: block; max-width: 100%; }
 
 /* ── Homepage ── */
 .home-page {
-  max-width: 1680px;
+  max-width: 1360px;
   margin: 0 auto;
-  padding: 72px 72px 120px;
+  padding: 72px 56px 120px;
 }
 
 .home-header {
@@ -45,6 +46,7 @@ h1.blog-title {
   letter-spacing: -0.035em;
   line-height: 1.02;
   margin: 0;
+  max-width: 700px;
 }
 
 .home-count {
@@ -59,7 +61,7 @@ h1.blog-title {
 /* Archive grid */
 .archive-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 520px;
+  grid-template-columns: minmax(0, 1fr) var(--preview-w);
   gap: 72px;
   padding-top: 24px;
 }
@@ -77,11 +79,11 @@ h1.blog-title {
 
 .archive-row a {
   display: grid;
-  grid-template-columns: 56px 1fr auto;
+  grid-template-columns: 48px 1fr auto;
   gap: 24px;
   padding: 26px 0;
   align-items: baseline;
-  transition: transform 0.3s;
+  transition: color 0.3s, transform 0.3s;
 }
 
 .archive-row:hover a,
@@ -100,7 +102,9 @@ h1.blog-title {
   display: flex;
   flex-direction: row;
   align-items: baseline;
-  gap: 16px;
+  flex-wrap: wrap;
+  min-width: 0;
+  gap: 18px;
 }
 
 .archive-title {
@@ -188,23 +192,42 @@ h1.blog-title {
     align-items: flex-start;
     gap: 12px;
   }
-  .archive-grid { grid-template-columns: 1fr; }
+  .archive-grid { grid-template-columns: 1fr; gap: 0; }
   .archive-preview { display: none; }
   .archive-row a {
-    grid-template-columns: 56px 1fr;
-    gap: 16px;
+    grid-template-columns: 64px 1fr auto;
+    grid-template-rows: auto auto;
+    gap: 4px 16px;
+    padding: 18px 0;
     align-items: center;
   }
   .archive-num { display: none; }
-  .archive-year { display: none; }
-  .archive-titles { flex-direction: column; gap: 4px; }
+  .archive-titles {
+    grid-row: 1;
+    grid-column: 2;
+    display: block;
+    flex-wrap: unset;
+  }
+  .archive-title { font-size: 19px; display: block; }
+  .archive-sub { display: none; }
+  .archive-year {
+    display: block;
+    grid-row: 1;
+    grid-column: 3;
+    align-self: start;
+  }
   .archive-thumb {
     display: block;
-    width: 56px;
-    aspect-ratio: 3 / 4;
-    order: -1;
+    grid-row: 1 / span 2;
+    grid-column: 1;
+    width: 64px;
+    height: 84px;
     background: #e8e4db;
-    flex-shrink: 0;
+  }
+  .archive-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
