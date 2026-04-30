@@ -8,7 +8,7 @@ featured_image = 'pics/beauty1.jpg'
 featured_image_class = 'cover bg-center'
 +++
 
-Last year I discovered [Robert Skinner](https://www.youtube.com/@Robert_Skinner)'s YouTube channel. It's one of those channels that should be much more followed. Robert has really cool and original ideas, shows every problem he encounters, how he resolves them, has great video editing skills and a totally chill tone. In September 2025, he released a video about a "kinetic lamp". I jumped into it, as with every one of his videos, not knowing that before the end of it, I was sure I was going to try to reproduce it. But I had some ideas to try to improve it along the way. Robert started this project as a one-day build and finally finished a few days later. Spoiler: it took me 4 months. But that's my excuse — I tried to improve it...
+Last year I discovered [Robert Skinner](https://www.youtube.com/@Robert_Skinner)'s YouTube channel. It's one of those channels that should be much more followed. Robert has really cool and original ideas, shows every problem he encounters, how he resolves them, has great video editing skills and a totally chill tone. In September 2025, he released a video about a "kinetic lamp". I jumped into it, as with every one of his videos, not knowing that before the end of it, I was sure I was going to try to reproduce it. But I had some ideas to try to improve it along the way. Robert started this project as a one-day build and finally finished a few days later. Spoiler: it took me 4 months. But that's my excuse. I tried to improve it...
 
 I have a thing with lamps. This one is the third I've built. My last 3 DIY projects were lamps. But this one feels special. Not only does the brushed acrylic diffuse light like nothing else, but let's see some of the things inside. It also has the scissor mechanism which I find fascinating, directly coupled with the intensity of the lamp. It ticks all the boxes for me.
 
@@ -113,7 +113,7 @@ Now, the assembly began.
 {{< gallery >}}
 {{< thumb src="pics/assembly1.jpg" alt="I used 2 strips of aluminium to glue the LEDs on and have better heat dispersion." >}}
 {{< thumb src="pics/assembly2.jpg" alt="Segments start to pile up" >}}
-{{< thumb src="pics/assembly3.jpg" alt="A first glance at the final look of the lamp — at this point I was stoked, and convinced the difficulty was behind me. After all, connecting LEDs is not a big deal." >}}
+{{< thumb src="pics/assembly3.jpg" alt="A first glance at the final look of the lamp. At this point I was stoked, and convinced the difficulty was behind me. After all, connecting LEDs is not a big deal." >}}
 {{< /gallery >}}
 
 <!--
@@ -178,7 +178,7 @@ This means one thing: a few more threaded inserts to install and each connection
 
 ### Dimming the lamp
 
-Then comes my last improvement. I loved the intensity based on the height of the lamp — it's a nice showoff. But let's be honest, the lamp is way nicer when fully extended. So being able to extend it to the top and set the intensity as I want should be great. For that I can't use only a potentiometer directly connected to the power. I need to combine the potentiometer with a controller (an ESP32 C6). The controller will compute the intensity based on the position of the lamp, or as received from the remote. I used a 24V dimmable power source, controllable through a 0-10V input. I placed a DAC module (GP8403 2-Channel I2C 0-10V DAC Module) between the controller (3.3v) and the power supply.
+Then comes my last improvement. I loved the intensity based on the height of the lamp, it's a nice showoff. But let's be honest, the lamp is way nicer when fully extended. So being able to extend it to the top and set the intensity as I want should be great. For that I can't use only a potentiometer directly connected to the power. I need to combine the potentiometer with a controller (an ESP32 C6). The controller will compute the intensity based on the position of the lamp, or as received from the remote. I used a 24V dimmable power source, controllable through a 0-10V input. I placed a DAC module (GP8403 2-Channel I2C 0-10V DAC Module) between the controller (3.3v) and the power supply.
 
 Using Claude I computed the rack and pinion teeth parameters to make the 300° of rotation of my potentiometer correspond to 55mm of travel on the base.
 
@@ -234,7 +234,7 @@ Achieving this blurry transparency with an FDM printer is not really doable, so 
 
 # Conclusion
 
-This was the best build I've achieved to date. Doing this during the free time I had, and thinking about the problems to solve when I wasn't, was really great. And I had many problems, countless wrong solutions, and a few good ones. Thanks to Robert's great idea and execution, I knew this was possible — I'm not sure I would have tried something like this on my own. There are so many things I haven't described here, like the top lock mechanism to hold the lamp in place, the software, the remote layout, etc. Maybe I will add another post for that.
+This was the best build I've achieved to date. Doing this during the free time I had, and thinking about the problems to solve when I wasn't, was really great. And I had many problems, countless wrong solutions, and a few good ones. Thanks to Robert's great idea and execution, I knew this was possible. I'm not sure I would have tried something like this on my own. There are so many things I haven't described here, like the top lock mechanism to hold the lamp in place, the software, the remote layout, etc. Maybe I will add another post for that.
 
 ![Beauty shot](pics/beauty1.jpg "Final shot")
 

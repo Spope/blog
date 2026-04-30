@@ -26,9 +26,9 @@ img, video { display: block; max-width: 100%; }
 
 /* ── Homepage ── */
 .home-page {
-  max-width: 1360px;
+  max-width: 1680px;
   margin: 0 auto;
-  padding: 72px 56px 120px;
+  padding: 72px 72px 120px;
 }
 
 .home-header {
@@ -59,7 +59,7 @@ h1.blog-title {
 /* Archive grid */
 .archive-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 420px;
+  grid-template-columns: minmax(0, 1fr) 520px;
   gap: 72px;
   padding-top: 24px;
 }
@@ -98,8 +98,9 @@ h1.blog-title {
 
 .archive-titles {
   display: flex;
-  flex-direction: column;
-  gap: 4px;
+  flex-direction: row;
+  align-items: baseline;
+  gap: 16px;
 }
 
 .archive-title {
@@ -196,6 +197,7 @@ h1.blog-title {
   }
   .archive-num { display: none; }
   .archive-year { display: none; }
+  .archive-titles { flex-direction: column; gap: 4px; }
   .archive-thumb {
     display: block;
     width: 56px;
@@ -551,7 +553,7 @@ h1.blog-title {
 .site-footer {
   display: flex;
   justify-content: flex-end;
-  padding: 32px 56px;
+  padding: 32px 72px;
   border-top: 1px solid var(--rule);
 }
 
