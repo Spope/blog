@@ -80,7 +80,8 @@ h1.blog-title {
   transition: transform 0.3s;
 }
 
-.archive-row:hover a {
+.archive-row:hover a,
+.archive-row.touch-selected a {
   transform: translateX(8px);
 }
 

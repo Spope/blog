@@ -26,7 +26,7 @@
   update();
 })();
 
-/* ── Homepage archive hover ── */
+/* ── Homepage archive hover + touch ── */
 (function () {
   var list = document.querySelector('.archive-list');
   if (!list) return;
@@ -63,6 +63,42 @@
   });
 
   list.addEventListener('mouseleave', function () { activate(0, false); });
+
+  /* Touch: 2-col layout → first tap selects (shows preview), second tap navigates.
+     Single-col/mobile layout → first tap navigates directly (thumbnail already visible). */
+  var isTouch = false;
+  var touchSelected = null;
+
+  document.addEventListener('touchstart', function () { isTouch = true; }, { once: true, passive: true });
+
+  function isTwoCol() {
+    return !window.matchMedia('(max-width: 820px)').matches;
+  }
+
+  rows.forEach(function (row) {
+    row.querySelector('a').addEventListener('click', function (e) {
+      if (!isTouch || !isTwoCol()) return;
+
+      if (touchSelected !== row) {
+        e.preventDefault();
+        if (touchSelected) touchSelected.classList.remove('touch-selected');
+        touchSelected = row;
+        row.classList.add('touch-selected');
+        activate(parseInt(row.dataset.idx, 10), true);
+      }
+      /* else: row already selected — let the default link navigate */
+    });
+  });
+
+  /* Tapping outside the list clears the selection */
+  document.addEventListener('touchend', function (e) {
+    if (!touchSelected) return;
+    if (!list.contains(e.target)) {
+      touchSelected.classList.remove('touch-selected');
+      touchSelected = null;
+      activate(0, false);
+    }
+  }, { passive: true });
 })();
 
 /* ── Lightbox ── */
