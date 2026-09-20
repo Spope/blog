@@ -8,7 +8,7 @@ featured_image = 'pics/beauty1.jpg'
 featured_image_class = 'cover bg-center'
 +++
 
-Last year I discovered [Robert Skinner](https://www.youtube.com/@Robert_Skinner)'s YouTube channel. It's one of those channels that should be much more followed. Robert has really cool and original ideas, shows every problem he encounters, how he resolves them, has great video editing skills and a totally chill tone. In September 2025, he released a video about a "kinetic lamp". I jumped into it, as with every one of his videos, not knowing that before the end of it, I was sure I was going to try to reproduce it. But I had some ideas to try to improve it along the way. Robert started this project as a one-day build and finally finished a few days later. Spoiler: it took me 4 months. But that's my excuse. I tried to improve it...
+Last year I discovered [Robert Skinner](https://www.youtube.com/@Robert_Skinner)'s YouTube channel. It's one of those channels that should be much more followed. Robert has really cool and original ideas, shows every problem he encounters, how he resolves them, has great video editing skills and a totally chill tone. In September 2025, he released a video about a "kinetic lamp". I jumped into it, as with every one of his videos, not knowing that before the end of it, I was sure I was going to try to reproduce it. Once the video finished, I watched it again immediately, and this time, I had some ideas to try to improve it along the way. Robert started this project as a one day build and finally finished a few days later. Spoiler: it took me 5 months. But that's my excuse. I tried to improve it...
 
 I have a thing with lamps. This one is the third I've built. My last 3 DIY projects were lamps. But this one feels special. Not only does the brushed acrylic diffuse light like nothing else, but let's see some of the things inside. It also has the scissor mechanism which I find fascinating, directly coupled with the intensity of the lamp. It ticks all the boxes for me.
 
@@ -20,23 +20,23 @@ So it started with a bit of excitement, diving into an awesome project, and star
 
 ![First CAD screenshot. As every first plan I make, nothing is being kept from that, except one thing, the Phillips screws.](pics/first.png)
 
-I looked for some online providers. In France there are some obvious platforms with great SEO for laser cutting on PMMA, but their prices are exorbitant. I found a small business to order only the pieces for one segment, to check if everything was good in the naive hope of using this first one in the final build. My main interrogation was the bending of the end cap. As I do not have a laser cutter, cutting a wood mold at the exact diameter was not possible as in the video. I ordered 6 pieces to try to have 2 usable bent ones. Luckily, I had a 50mm hole saw, allowing me to create a wood cylinder for heating the piece, and then press it into a 3D printed mold at the exact size. It worked great, but as I feared, the heat of the acrylic had deformed the mold. So, for the other pieces, I will print 2 molds to use them alternately, and a frozen bottle to cool them down between uses.
+I looked for some online providers. In France there are some obvious platforms with great SEO for laser cutting on PMMA, but their prices are exorbitant. I found a small business to order only the pieces for one segment, to check if everything was good in the naive hope of using this first one in the final build. My main interrogation was the bending of the end cap. As I do not have a laser cutter, cutting a wood mold at the exact diameter as in the video was not possible. I ordered 6 pieces to try to have 2 usable bent ones. Luckily, I had a 50mm hole saw, allowing me to create a wood cylinder for heating the piece, and then press it into a 3D printed mold at the exact size. It worked great, but as I feared, the heat of the acrylic had deformed the mold. So, for the other pieces, I will print 2 molds to use them alternately, and a frozen bottle to cool them down between uses.
 
 ![My DIY bending shop. As the part I was the most afraid of, it went really great. This picture was taken during the real segments building, not the prototype, but it's the only one I have.](pics/bending.jpg)
 
 After bending the end cap, I cut them to the correct size, once again with a 3D printed jig, on my tracksaw.
 
-![Cutting the end cap](pics/cut.jpg)
+![Cutting the end cap, the jig has a hole so I can clamp it while still sliding it against the fence.](pics/cut.jpg)
 
-The prototype ended great.
+The prototype ended great :
 
 ![First prototype segment. This thing is rock solid, but also too heavy.](pics/proto.png)
 
-The only problem was weight, more than 400g. This thing was empty, no light, no bolts, and many other things I had no idea about yet but was suspecting. So back to the CAD software, I changed the thickness to 2mm. This is where I learned about parametric modeling. A bit late, so I restarted my design from scratch.
+The only problem was weight, more than 400g. This thing was empty, no light, no bolts, and no many other things I had no idea about yet but was suspecting. So back to the CAD software, I changed the thickness to 2mm. This is where I learned about parametric modeling. A bit late, so I restarted my design from scratch.
 
 After many modifications, hesitations, and problem solving, I had a new drawing that fixed various problems I was discovering.
 
-![The CAD used to order the PMMA. Yes there are 6 end caps for each segment as I was still expecting some troubles for the bending. It turned out it was quite easy, and I have plenty of these small rectangular pieces left](pics/cad.png)
+![The CAD used to order the PMMA. Yes there are 6 end caps for each segment as I was still expecting some troubles for the bending. It turned out it was quite easy, and I have plenty of these small rectangular pieces left](pics/CAD.png)
 
 I'll let you try to figure out why there are wavy lines on the pivot holes.
 
@@ -62,14 +62,7 @@ While waiting for my acrylic order, I started printing parts to assemble the seg
 ![Inserts](pics/insertRound.jpg "More inserts")
 -->
 
-Yes, that's a lot of threaded inserts. You can screw directly into the 3D print but it will not handle multiple assemblies very well. I wanted to be able to mount/unmount the segments multiple times, knowing the back and forth that awaited me, without damaging the threads.
-
-### Waiting for the acrylic pieces
-
-Then I started to think about the base mechanism and my first improvement. On his version, Robert fixed one end of the lamp on the base with a pivot, the other on a slider to allow the movement. But the side effect is that when deployed or folded, the lamp is not centered on the base. Not a huge deal but setting 2 sliders will allow me to keep it centered. The problem is: how to center it without having the lamp slide from right to left on the sliders? I thought about wire pulleys, rack and pinion, but with my limited CAD skills, a central pivot with one arm on each slider will do the job. So I learned joints, to animate the lamp.
-
-<!--![CAD Animation](pics/animation.mp4)-->
-{{<video src="pics/animation.mp4" alt="Yes, I film my screen">}}
+Yes, that's a lot of threaded inserts. You can screw directly into the 3D print but it will not handle multiple assemblies very well. I wanted to be able to mount/unmount the segments multiple times, guessing the back and forth that awaited me, without damaging the threads.
 
 Finally, my order arrived. Clear acrylic, beautifully transparent, meaning one thing: lots of sanding.
 
@@ -85,7 +78,7 @@ Finally, my order arrived. Clear acrylic, beautifully transparent, meaning one t
 ![Sanding...](pics/sanding3.jpg)
 -->
 
-After cleaning the pieces, it was time to start glueing the blocks. I had never used epoxy, and, after trying on one little piece, I decided that it was not going to be today. It was too slow and messy for what I needed. I preferred to use CA glue. On the sanded acrylic it holds great. I needed a perfect alignment so I printed some jigs for both the small blocks and the curved end.
+After cleaning the pieces, it was time to start glueing the blocks. I had never used epoxy, and, after trying on one little piece, I decided that it was not going to be today. It was too slow and messy for what I needed. I preferred to use CA glue. On the sanded acrylic it holds great. I needed perfect alignment to ensure the screw holes would line up correctly, so I printed some jigs for both the small blocks and the curved end to help me.
 
 ![Glueing the blocks with a 3D printed jig, referencing the axle hole](pics/jig1.jpg)
 {{< gallery >}}
@@ -97,7 +90,7 @@ After cleaning the pieces, it was time to start glueing the blocks. I had never 
 ![Glued](pics/glued.jpg)
 -->
 
-Then, comes another of my improvements. I wanted the segment to have 2 LED strips each, one on the front, one on the back. Thanks to that, while laid against a wall, the light will also be bouncing from the back for a softer light. I chose to set the connectors into the round part, outside of the usable space, to allow the maximum amount of LED strip between the two axes. Actually I picked the dimensions of the segment based on the LED strip cuttable segment.
+Then, comes my first improvements. I wanted the segment to have 2 LED strips each, one on the front, one on the back. Thanks to that, while laid against a wall, the light will also be bouncing from the back for a softer diffusion. I chose to set the connectors into the round part of the segment, outside of the usable space, to allow the maximum amount of LED strip between the two axes. Actually I picked the dimensions of the segment based on the LED strip cuttable segment.
 
 {{< gallery >}}
 {{< thumb src="pics/connectors1.jpg" alt="All the connectors to glue (and sand to give glue something to bond to)" >}}
@@ -124,7 +117,12 @@ Now, the assembly began.
 
 # Base mechanism
 
-Now, it's time for the base mechanism. As seen in the previous video, each one is composed of two 10mm aluminium tubes, held by 3D-printed parts. They are synchronized by the 2 arms mounted on a central pivot. I kept it as simple as my first CAD draft.
+Now, it's time for the base mechanism and my second improvement. On his version, Robert fixed one end of the lamp on the base with a pivot, the other on a slider to allow the movement. But the side effect is that when deployed or folded, the lamp is not centered on the base. Not a huge deal but setting 2 sliders will allow me to keep it centered. The problem is: how to center it without having the lamp slide from right to left on the sliders? I thought about wire pulleys, rack and pinion, but with my limited CAD skills, a central pivot with one arm on each slider will do the job. So I learned joints, to animate the lamp.
+
+<!--![CAD Animation](pics/animation.mp4)-->
+{{<video src="pics/animation.mp4" alt="Yes, I'm recording my screen with my phone, and I'm not that old, I swear !">}}
+
+As seen in the previous video, each slider is composed of two 10mm aluminium tubes, held by 3D-printed parts. They are synchronized by the 2 arms mounted on a central pivot. I kept it as simple as my first CAD draft.
 {{< gallery >}}
 {{< thumb src="pics/mechanism1.jpg" alt="Assembling the segment supports" >}}
 {{< thumb src="pics/mechanism2.jpg" alt="Printing the parts" >}}
@@ -158,7 +156,8 @@ I cut my LED strips to length, and glued each one on an aluminium strip. I solde
 -->
 
 Then I started connecting the LEDs. This step was the most tedious because the wires were just long enough. I used tweezers to pass them through the arc-shaped hole between segments, and connected them to the connectors, which required pushing on them to open them. All this inside a tiny space, requiring unscrewing 16 screws at minimum to connect 2 segments. And there are 8 of these...
-And it was time to see the thing glow.
+
+And then, it was time to see the thing glow.
 
 {{< gallery >}}
 {{< thumb src="pics/LEDConnection.jpg" alt="Connecting the LED" >}}
@@ -168,19 +167,25 @@ And it was time to see the thing glow.
 ![LED](pics/LEDConnection2.jpg "Connecting the LED")
 -->
 
-Right after that I started seeing false contacts when I tried to move the lamp. The wires I cut and soldered onto the LEDs were a bit short as I feared, and the push-to-release connectors I used were not really holding the wires very firmly. So, I needed to find a way to fix that more securely after soldering longer wires. I designed a sort of clamp, mounted on the existing pivot with a press fit.
+Right after that I started seeing false contacts when I tried to move the lamp. The wires I cut and soldered onto the LEDs were a bit short as I feared, and the push-to-release connectors I used were not really holding the wires very firmly. So, I needed to find a way to fix that more securely, and soldering longer wires. I designed a sort of clamp, mounted on the existing pivot with a press fit.
+
+![The clamp I designed is this brown part](pics/cableClamp.png)
 
 This means one thing: a few more threaded inserts to install and each connection to be re-made.
 
 ![Threaded inserts again](pics/clamp.jpg)
 ![The clamp in place, holding the wire](pics/clamp2.jpg)
 
+Doing this was laborious, but it worked great, since I clamped the cable, I haven't seen any light flickering.
+
 
 ### Dimming the lamp
 
-Then comes my last improvement. I loved the intensity based on the height of the lamp, it's a nice showoff. But let's be honest, the lamp is way nicer when fully extended. So being able to extend it to the top and set the intensity as I want should be great. For that I can't use only a potentiometer directly connected to the power. I need to combine the potentiometer with a controller (an ESP32 C6). The controller will compute the intensity based on the position of the lamp, or as received from the remote. I used a 24V dimmable power source, controllable through a 0-10V input. I placed a DAC module (GP8403 2-Channel I2C 0-10V DAC Module) between the controller (3.3v) and the power supply.
+Then comes my last improvement. I loved the intensity based on the height of the lamp, it's a nice showoff. But let's be honest, the lamp is way nicer when fully extended. So being able to extend it to the top and set the intensity as I want should be great. For that I can't use only a potentiometer directly connected to the power. I need to combine the potentiometer with a controller (an ESP32 C6 in my case). The controller will compute the intensity based on the position of the lamp, or as received from the remote. I used a 24V dimmable power source, controllable through a 0-10V input. I placed a DAC module (GP8403 2-Channel I2C 0-10V DAC Module) between the controller (3.3v) and the power supply.
 
 Using Claude I computed the rack and pinion teeth parameters to make the 300° of rotation of my potentiometer correspond to 55mm of travel on the base.
+
+![The rack and pinion mechanism to rotate the potentiometer](pics/rackPinion.png)
 
 Two prints later, I finally tested everything, except the remote.
 
@@ -191,8 +196,8 @@ Two prints later, I finally tested everything, except the remote.
 Now that I have a working lamp, the concrete base makes so much sense. Raising the lamp takes a bit of strength and the base needs to be quite heavy to stay in place. So I designed the smallest possible concrete base to host the sliders, the power supply and the electronics. I was hoping to have a smooth concrete, and remembered viewing a [Modustrial Maker](https://www.youtube.com/watch?v=a3WpKI0YwNY) video, mentioning a specialized concrete exactly for this, GFRC.
 The first step to get there was the form, made from a sheet of melamine.
 
-![Form](pics/form1.jpg "Form")
-![Form](pics/form2.jpg "Silicon")
+![Form](pics/form1.jpg)
+![The silicon (before cleaning it) to seal the form](pics/form2.jpg)
 
 I bought a GFRC kit that came with a calculator for all the ingredients; it was quite easy to make the concrete. I opted for white concrete and added some black colorant into the mix, and, following a test, I sifted the sand to remove the big grains, hoping it would reduce the orange/yellow tint it had in the concrete.
 
