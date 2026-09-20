@@ -181,7 +181,7 @@ Doing this was laborious, but it worked great, since I clamped the cable, I have
 
 ### Dimming the lamp
 
-Then comes my last improvement. I loved the intensity based on the height of the lamp, it's a nice showoff. But let's be honest, the lamp is way nicer when fully extended. So being able to extend it to the top and set the intensity as I want should be great. For that I can't use only a potentiometer directly connected to the power. I need to combine the potentiometer with a controller (an ESP32 C6 in my case). The controller will compute the intensity based on the position of the lamp, or as received from the remote. I used a 24V dimmable power source, controllable through a 0-10V input. I placed a DAC module (GP8403 2-Channel I2C 0-10V DAC Module) between the controller (3.3v) and the power supply.
+Then comes my last improvement. I loved the intensity based on the height of the lamp, it's a nice showoff. But let's be honest, the lamp is way nicer when fully extended. So being able to extend it to the top and set the intensity as I want should be great. For that I can't use only a potentiometer directly connected to the power. I need to combine the potentiometer with a controller (an ESP32 C6 in my case). The controller will compute the intensity based on the position of the lamp, or as received from the remote. I used a 24V dimmable power source, controllable through a 0-10V input. I placed a DAC module (GP8403 2-Channel I2C 0-10V DAC Module) between the controller (3.3v) and the power supply. The code can be find [here](https://github.com/Spope/scissor-lamp).
 
 Using Claude I computed the rack and pinion teeth parameters to make the 300° of rotation of my potentiometer correspond to 55mm of travel on the base.
 
