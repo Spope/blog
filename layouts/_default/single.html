@@ -18,13 +18,13 @@
     {{ .Content }}
 
     <nav class="post-nav">
-      {{- with .NextInSection }}
+      {{- with .PrevInSection }}
       <a href="{{ .RelPermalink }}">
         <div class="post-nav-label">← OLDER</div>
         <div class="post-nav-title">{{ .Title }}</div>
       </a>
       {{- else }}<span></span>{{ end }}
-      {{- with .PrevInSection }}
+      {{- with .NextInSection }}
       <a href="{{ .RelPermalink }}" class="post-nav-next">
         <div class="post-nav-label">NEWER →</div>
         <div class="post-nav-title">{{ .Title }}</div>
