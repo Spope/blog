@@ -178,13 +178,22 @@
     if (e.key === 'ArrowRight') step(1);
   });
 
+  /* Swipe to navigate — ignored for pinch gestures and while zoomed in (panning) */
   var touchStartX = 0;
+  var touchStartY = 0;
+  var multiTouch = false;
   lb.addEventListener('touchstart', function (e) {
-    touchStartX = e.changedTouches[0].clientX;
+    if (e.touches.length > 1) { multiTouch = true; return; }
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
   }, { passive: true });
   lb.addEventListener('touchend', function (e) {
+    if (e.touches.length > 0) return;
+    if (multiTouch) { multiTouch = false; return; }
+    if (window.visualViewport && window.visualViewport.scale > 1.01) return;
     var dx = e.changedTouches[0].clientX - touchStartX;
-    if (Math.abs(dx) < 50) return;
+    var dy = e.changedTouches[0].clientY - touchStartY;
+    if (Math.abs(dx) < 50 || Math.abs(dx) < Math.abs(dy)) return;
     step(dx < 0 ? 1 : -1);
   }, { passive: true });
 
