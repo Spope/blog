@@ -10,13 +10,13 @@ featured_image_class = 'contain bg-center'
 
 Around 2014 I attended a [NASA Space Apps Challenge](https://www.spaceappschallenge.org/), and the theme was "What if you could know what is happening above your head?". At the end of the two days we ended up with a Google Map showing a moving satellite and its orbit drawn on the map. The satellite list was quite minimal and the map was not really exciting. After this event I decided to continue this project and see what I could achieve.
 
-After a few weeks of coding, I had a nice atmospheric shader, with great textures, and the full [Celestrak](https://celestrak.org/) TLE catalog searchable.
+After a few weeks of coding, I had a nice atmospheric shader, with great textures, and the full [Celestrak](https://celestrak.org/) TLE catalog searchable and [ARbit](https://arbit.app/) was born.
 
 Through the years I revisited this project, refactored it, added new features like the view from a satellite, or the view from the ground using the user's geolocation.
 
 And this year is no different, I totally refactored the website, but I haven't typed a single line of code (well of course I have, but you get the idea). I used Claude Code to restart from the beginning, fixing some approximations I hadn't solved previously. I kept the same UI as I was happy with it, and I found that without a good amount of work, Claude Code designs are quickly identifiable.
 
-So there it is, the Nth iteration of ARbit, with a few new features for now:
+So there it is, the Nth iteration of [ARbit](https://arbit.app/), with a few new features for now:
  - Showing every satellite above your head
  - Showing all the visible satellites above your head (not quite satisfying for now, but I hope to improve it)
 
