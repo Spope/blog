@@ -141,6 +141,12 @@ h1.blog-title {
   aspect-ratio: 3 / 4;
   overflow: hidden;
   background: #e8e4db;
+  transition: background-color 0.4s;
+}
+
+/* Drop the grey once an image shows, so transparent PNGs sit on the page bg */
+.archive-preview-frame:has(.preview-img.active) {
+  background: transparent;
 }
 
 .preview-img {
@@ -158,6 +164,12 @@ h1.blog-title {
 .preview-img.active {
   opacity: 1;
   transform: scale(1);
+}
+
+/* featured_image_class = 'contain …' → show the whole image, no crop */
+.preview-img.contain,
+.archive-thumb img.contain {
+  object-fit: contain;
 }
 
 .preview-placeholder {
@@ -222,6 +234,8 @@ h1.blog-title {
     grid-column: 1;
     width: 64px;
     height: 84px;
+  }
+  .archive-thumb:empty {
     background: #e8e4db;
   }
   .archive-thumb img {

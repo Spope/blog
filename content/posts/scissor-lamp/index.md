@@ -30,7 +30,7 @@ After bending the end cap, I cut them to the correct size, once again with a 3D 
 
 The prototype ended great :
 
-![First prototype segment. This thing is rock solid, but also too heavy.](pics/proto.png)
+![First prototype segment. This thing is rock solid, but also too heavy.](pics/proto.jpg)
 
 The only problem was weight, more than 400g. This thing was empty, no light, no bolts, and no many other things I had no idea about yet but was suspecting. So back to the CAD software, I changed the thickness to 2mm. This is where I learned about parametric modeling. A bit late, so I restarted my design from scratch.
 
