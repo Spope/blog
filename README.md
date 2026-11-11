@@ -149,7 +149,8 @@ Photos out of a phone carry GPS coordinates and device info. Before committing:
 ./scripts/strip-exif.sh
 ```
 
-It rewrites every image and `.mp4` under `content/posts/` in place.
+It rewrites every image and `.mp4` under `content/posts/` in place. Pass a folder
+to clean only one post: `./scripts/strip-exif.sh content/posts/my-post`.
 
 ### 5. Proofread (optional)
 
