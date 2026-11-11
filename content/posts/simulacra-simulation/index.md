@@ -2,7 +2,7 @@
 date = '2025-06-24T21:32:53+01:00'
 draft = false
 title = 'Simulacra & Simulation'
-description = 'Copying the fake imposture.'
+description = 'Copying the fake imposture'
 tags = ['lamp', 'LED', 'Matrix', 'book', 'diy']
 featured_image = 'pics/beauty1.jpg'
 featured_image_class = 'cover bg-center'

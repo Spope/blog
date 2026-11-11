@@ -2,7 +2,7 @@
 date = '2024-12-15T20:56:45+01:00'
 draft = false
 title = 'Glass Block Lamp'
-description = 'Highlighting the common.'
+description = 'Highlighting the common'
 tags = ['lamp', 'LED', 'glass', 'diy']
 featured_image = 'pics/beauty.jpg'
 featured_image_class = 'cover bg-center'
