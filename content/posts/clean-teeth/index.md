@@ -1,6 +1,6 @@
 +++
 date = '2026-11-22T17:03:48+01:00'
-draft = true
+draft = false
 title = 'Clean Teeth'
 description = 'Two minutes of peace'
 tags = ['3D print', 'ESP-32', 'Toothpaste']
