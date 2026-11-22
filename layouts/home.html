@@ -23,7 +23,7 @@
         <a href="{{ $p.RelPermalink }}">
           <span class="archive-num">{{ printf "%02d" (sub (len $posts) $i) }}</span>
           <span class="archive-titles">
-            <span class="archive-title">{{ $p.Title }}</span>
+            <span class="archive-title">{{ if $p.Params.favorite }}<span class="archive-fav" title="Favorite" aria-label="Favorite">★</span>{{ end }}{{ $p.Title }}</span>
             {{- with $p.Description }}<span class="archive-sub">— {{ . }}</span>{{ end }}
           </span>
           <span class="archive-year">{{ $p.Date.Format "2006" }}</span>

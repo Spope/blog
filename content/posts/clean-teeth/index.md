@@ -5,6 +5,7 @@ title = 'Clean Teeth'
 description = 'Two minutes of peace'
 tags = ['3D print', 'ESP-32', 'Toothpaste']
 featured_image = 'pics/screenTest.jpg'
+favorite = true
 +++
 
 My kids are currently into some deep passions. My youngest is Minecrafting every time he can, my eldest is reading "Wings of Fire" a 16-volume fantasy series with dragons. And in common, they both have a shared passion, grumble and moan when time has come to brush their teeth. So why not combine all of this and see what could come out of this!

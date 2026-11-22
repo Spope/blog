@@ -6,6 +6,7 @@ description = 'Raising the light'
 tags = ['lamp', 'LED', '3D print', 'diy']
 featured_image = 'pics/beauty1.jpg'
 featured_image_class = 'cover bg-center'
+favorite = true
 +++
 
 Last year I discovered [Robert Skinner](https://www.youtube.com/@Robert_Skinner)'s YouTube channel. It's one of those channels that should be much more followed. Robert has really cool and original ideas, shows every problem he encounters, how he resolves them, has great video editing skills and a totally chill tone. In September 2025, he released a video about a "kinetic lamp". I jumped into it, as with every one of his videos, not knowing that before the end of it, I was sure I was going to try to reproduce it. Once the video finished, I watched it again immediately, and this time, I had some ideas to try to improve it along the way. Robert started this project as a one day build and finally finished a few days later. Spoiler: it took me 5 months. But that's my excuse. I tried to improve it...
