@@ -60,3 +60,6 @@ And like that, my two Clean Teeth Timers were ready!
 {{< /gallery >}}
 
 As I write these lines, I haven't yet shown this to my kids, but as I trust my instinct, and it is strong and clear, I know that the two times a day complaints will be behind, for at least 3 days.
+
+---
+Source code (point an agent to it) and STLs are available on [Github](https://github.com/Spope/clean-teeth)
