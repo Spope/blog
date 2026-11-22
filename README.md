@@ -26,35 +26,36 @@ No Node, npm or Go dependencies — nothing to `npm install`.
 
 ```
 blog/
-├── hugo.toml                  ← site config (title, baseURL, taxonomies)
+├── hugo.toml                  ← site config (title, baseURL, disabled page kinds)
 ├── archetypes/default.md      ← template used by `hugo new`
 ├── content/
 │   ├── _index.md              ← homepage front matter
 │   └── posts/
+│       ├── _index.md          ← stops Hugo publishing a /posts/ list page
 │       └── my-post/           ← one directory per post ("page bundle")
 │           ├── index.md       ← the post itself
 │           └── pics/          ← its images and videos
-├── layouts/                   ← the custom theme (overrides everything)
-│   ├── _default/baseof.html   ← HTML skeleton: <head>, footer, lightbox markup
-│   ├── _default/single.html   ← a post page
+├── layouts/                   ← all templates (no theme)
+│   ├── baseof.html            ← HTML skeleton: <head>, footer, lightbox markup
 │   ├── home.html              ← the index (numbered list + hover preview)
-│   ├── partials/
+│   ├── page.html              ← a post page
+│   ├── 404.html               ← "page not found"
+│   ├── _partials/
 │   │   └── head-additions.html← Umami analytics tag
-│   └── shortcodes/            ← gallery / thumb / video (see below)
+│   └── _shortcodes/           ← gallery / thumb / video (see below)
 ├── static/                    ← copied verbatim to the site root
 │   ├── css/blog.css           ← all styles
-│   ├── js/blog.js             ← hover preview + lightbox
-│   └── images/hero.jpg
+│   └── js/blog.js             ← hover preview + lightbox
 ├── scripts/strip-exif.sh      ← metadata cleaner for media
 ├── .github/workflows/hugo.yaml← build + deploy pipeline
 ├── public/                    ← generated output (gitignored, disposable)
 └── resources/                 ← Hugo's image-resize cache (gitignored)
 ```
 
-**Templating.** Hugo looks in `layouts/` before `themes/`, so every file above
-wins over the theme. `hugo.toml` still declares `theme = 'ananke'` from the
-original setup, but no Ananke template is used any more — the site renders
-entirely from `layouts/`.
+**Templating.** There is no theme: the site renders entirely from `layouts/`,
+which follows Hugo's 0.146+ folder structure (`_partials/`, `_shortcodes/`, no
+`_default/`). Only the homepage, the posts and the 404 page are published — tag
+and category pages are turned off with `disableKinds` in `hugo.toml`.
 
 ---
 
@@ -123,9 +124,7 @@ post directory.
 {{< video src="pics/clip.mp4" alt="Description" >}}         video tile with a ▶ badge
 ```
 
-Wrap several of them in a `gallery` to get the two-column grid — everything
-inside one gallery becomes a single lightbox set, navigable with the arrow keys
-or by swiping:
+Wrap several of them in a `gallery` to get the two-column grid:
 
 ```
 {{< gallery >}}
@@ -137,6 +136,10 @@ or by swiping:
 
 Plain Markdown images (`![Alt](pics/photo.jpg)`) also work and are displayed
 full width in the text column.
+
+Clicking any image or video in a post opens the lightbox. Every image and video
+in the post, across all its galleries, forms a single set in page order,
+navigable with the arrow keys or by swiping.
 
 Thumbnails are generated at build time by Hugo and cached in `resources/`; the
 lightbox always links to the original file.
@@ -207,9 +210,9 @@ on every run, so they never need to be committed.
 
 ## Analytics
 
-`layouts/partials/head-additions.html` loads [Umami](https://umami.is/)
-(cloud-hosted, cookieless) on every page. Removing that one file removes all
-tracking.
+`layouts/_partials/head-additions.html` loads [Umami](https://umami.is/)
+(cloud-hosted, cookieless) on every page. Emptying that file removes all
+tracking (don't delete it — `baseof.html` includes it).
 
 ---
 

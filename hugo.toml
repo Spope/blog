@@ -1,7 +1,7 @@
 baseURL = 'http://blog.spope.fr/'
-languageCode = 'en-us'
+locale = 'en-US'
 title = 'My projects, an archive'
-theme = 'ananke'
+disableKinds = ['taxonomy', 'term']
 
 [markup.tableOfContents]
   startLevel = 1
@@ -10,11 +10,6 @@ theme = 'ananke'
 
 [params]
   description = 'A personal blog'
-  featured_image_class = "cover bg-center"
-
-[taxonomies]
-  tag = 'tags'
-  category = 'categories'
 
 [caches]
   [caches.images]
