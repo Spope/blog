@@ -8,26 +8,29 @@ featured_image = 'pics/screenTest.jpg'
 favorite = true
 +++
 
-My kids are currently into some deep passions. My youngest is Minecrafting every time he can, my eldest is reading "Wings of Fire" a 16-volume fantasy series with dragons. And in common, they both have a shared passion, grumble and moan when time has come to brush their teeth. So why not combine all of this and see what could come out of this!
+My kids are currently into some deep passions. My youngest is Minecrafting every time he can, my eldest is reading "Wings of Fire", a 16-volume fantasy series with dragons. And in common, they both share a passion: grumbling and moaning when it's time to brush their teeth. So why not combine all of this and see what could come out of this!
 
 # The plan
 
 I had seen some [Waveshare](https://www.waveshare.com/esp32-s3-touch-amoled-1.75.htm?sku=31262) screens on many other projects and I always wanted to try one and see what I could do with them.
 
-The first step was to create the software with Claude, with the hardware limitations baked in. I asked to create a 2-minute timer, with switchable themes of a character brushing his teeth, enhanced with small animations, peek-a-boo, slides and per-theme animations. The Minecraft theme was perfect on the first try. It suggested the XP animation, small green spheres attracted by Steve. I then asked to have a mine animation, it felt mandatory. For the Wings of Fire, I used the comics as inspiration and I had to tweak the style multiple times, as it is more complicated than the Minecraft style. Claude suggested the rainbow animation as Glory does that apparently, I asked to have her flying, while keeping brushing her teeth!
+The first step was to create the software with Claude, with the hardware limitations baked in. I asked it to create a 2-minute timer, with switchable themes of a character brushing his teeth, enhanced with small animations, peek-a-boo, slides and per-theme animations. The Minecraft theme was perfect on the first try. It suggested the XP animation, small green spheres attracted by Steve. I then asked for a mine animation, it felt mandatory. For the Wings of Fire, I used the comics as inspiration and I had to tweak the style multiple times, as it is more complicated than the Minecraft style. Claude suggested the rainbow animation as Glory does that apparently, I asked to have her flying, while still brushing her teeth!
+
+I started visualizing the animation into a web page:
 
 {{< brushy-sim theme="minecraft" >}}
 
 # First screen test
-Once the screens arrived, I discovered two things. First they look really great, very bright with beautiful colors. Second thing I discovered is that I read the product description too fast, as the battery is not included inside the case.
 
-![The waveshare screen](pics/screenTest.jpg)
+Once the screens arrived, I discovered two things. First they look really great, very bright with beautiful colors. Second thing is that I read the product description too fast, as the battery is not included inside the case.
+
+![The Waveshare screen](pics/screenTest.jpg)
 
 So I ordered two batteries and started designing the stand for this.
 
 # CAD
 
-This time I tried Onshape, and will keep using it instead of Fusion 360. It's quite easy to learn after Fusion, works really well and is web based, which is the biggest point for me as I use a variety of macOS / Linux computers.
+For this project, I tried Onshape, and will keep using it instead of Fusion 360. It's quite easy to learn after Fusion, works really well and is web-based, which is the biggest point for me as I use a variety of macOS / Linux computers.
 
 {{< gallery >}}
 {{< thumb src="pics/cad-1.png" >}}
@@ -37,13 +40,14 @@ This time I tried Onshape, and will keep using it instead of Fusion 360. It's qu
 I kept it straightforward, as I was learning the tool while doing it, I avoided complex compound shapes. I still like the design, the only problem I see is that the base is too big, but I chose a 3.7V 2000mAh battery to run for months, and this takes some space.
 
 # Printing and assembly
+
 {{< gallery >}}
 {{< thumb src="pics/1.jpg" >}}
 {{< thumb src="pics/2.jpg" >}}
 {{< thumb src="pics/3.jpg" >}}
 {{< thumb src="pics/4.jpg" >}}
 {{< /gallery >}}
-The battery came with a JST connector, but the screen takes an MX1.25 port, so I had to solder it to the battery. I don't remember where I read this, but as it is great advice I will write it here too, when cutting the cable of a battery, never cut them both at the same time, as the cutting pliers could make contact and damage the battery.
+The battery came with a JST connector, but the screen takes an MX1.25 port, so I had to solder it to the battery. I don't remember where I read this, but as it is great advice I will write it here too, when cutting the wires of a battery, never cut them both at the same time, as the cutting pliers could short the battery.
 {{< gallery >}}
 {{< thumb src="pics/5.jpg" >}}
 {{< thumb src="pics/6.jpg" >}}
@@ -59,7 +63,7 @@ And like that, my two Clean Teeth Timers were ready!
 {{< thumb src="pics/11.jpg" >}}
 {{< /gallery >}}
 
-As I write these lines, I haven't yet shown this to my kids, but as I trust my instinct, and it is strong and clear, I know that the two times a day complaints will be behind, for at least 3 days.
+As I write these lines, I haven't yet shown this to my kids, but because I trust my instinct, and it is strong and clear, I know that the twice-a-day complaints will be behind me. For at least 3 days.
 
 ---
-Source code (point an agent to it) and STLs are available on [Github](https://github.com/Spope/clean-teeth)
+Source code (point an agent to it) and STLs are available on [GitHub](https://github.com/Spope/clean-teeth)
