@@ -12,7 +12,7 @@ My kids are currently into some deep passions. My youngest is Minecrafting every
 
 # The plan
 
-I had seen some [Waveshare](https://www.waveshare.com/esp32-s3-touch-amoled-1.75.htm?sku=31262) screens on many other projects and I always wanted to try one and see what I could do with them.
+I wanted to try using a screen for an ESP32 for a long time, without knowing exactly what I needed. The ready-to-use modules on Waveshare looked really nice. The [1.75inch AMOLED Round Touch Display](https://www.waveshare.com/esp32-s3-touch-amoled-1.75.htm?sku=31262) is quite attractive, an AMOLED display, a good resolution with touch support. It's not cheap, but it will allow me to test many things.
 
 The first step was to create the software with Claude, with the hardware limitations baked in. I asked it to create a 2-minute timer, with switchable themes of a character brushing his teeth, enhanced with small animations, peek-a-boo, slides and per-theme animations. The Minecraft theme was perfect on the first try. It suggested the XP animation, small green spheres attracted by Steve. I then asked for a mine animation, it felt mandatory. For the Wings of Fire, I used the comics as inspiration and I had to tweak the style multiple times, as it is more complicated than the Minecraft style. Claude suggested the rainbow animation as Glory does that apparently, I asked to have her flying, while still brushing her teeth!
 
